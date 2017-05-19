@@ -45,4 +45,4 @@ const rickRollAction = setLyrics('Never gonna give you up, never gonna let you d
 store.dispatch(rickRollAction);
 
 console.log('-------------------------');
-console.log('State after second SET_LYRICS action: ', store.getState());
+console.log('State after second SET_LYRICS action: ', store.getState()); 
