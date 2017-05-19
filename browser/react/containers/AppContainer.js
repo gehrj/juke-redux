@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { hashHistory } from 'react-router';
+import store from '../store';
 
 import initialState from '../initialState';
 import AUDIO from '../audio';

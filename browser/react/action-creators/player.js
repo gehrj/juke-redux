@@ -1,13 +1,13 @@
 //Action Creator
 
-import {SET_LYRICS} from '../constants';
+import {START_PLAYING} from '../constants';
 import axios from 'axios';
 import store from 'redux'
 
-export const setLyrics = function(text) {
+export const startPlaying = function(blnIsPlaying) {
     return {
-        type: SET_LYRICS,
-        lyric: text          //this is reffered to as the payload
+        type: START_PLAYING,
+        isPlaying: blnIsPlaying          //this is reffered to as the payload
     };
 };
 

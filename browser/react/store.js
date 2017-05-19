@@ -1,11 +1,22 @@
 //Store!
 /* eslint-disable no-underscore-dangle */
-import {createStore} from 'redux';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import loggerMiddleware from 'redux-logger';
+import thunkMiddleware from 'redux-thunk';
+import lyricsReducer from './reducers/lyrics-reducer';
+import playerReducer from './reducers/player-reducer';
+
 // applyMiddleware
 // import { composeWithDevTools } from 'redux-devtools-extension';
-import reducer from './reducers/root-reducer';
+
 /* eslint-enable */
-let store = createStore(reducer);
+// let middleware = applyMiddleware(loggerMiddleware)
+let store = createStore(
+  combineReducers({
+    lyrics: lyricsReducer,
+    player: playerReducer
+  }),
+  applyMiddleware(loggerMiddleware, thunkMiddleware));
 // composeWithDevTools(applyMiddleware(...middleware))
 
 
