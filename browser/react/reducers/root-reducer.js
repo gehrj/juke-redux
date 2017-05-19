@@ -1,6 +1,6 @@
 // Reducer
 
-import { SET_LYRICS } from './constants';
+import { SET_LYRICS } from '../constants';
 
 const initialState = { text: '' }
 
